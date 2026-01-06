@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Laborator Tehnică Dentară New Tehnic Dent</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Laborator de tehnică dentară New Tehnic Dent – lucrări metalo-ceramice, zirconiu, proteze totale și parțiale, lucrări pe implanturi și reparații. Colaborare cu medici stomatologi, calitate și precizie.">
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f5f5f5;
+            color: #111111;
+            line-height: 1.6;
+        }
+
+        /* PALETĂ CULORI
+           Negru: #111111
+           Gri închis: #1f1f1f
+           Auriu: #c89a2b
+        */
+
+        header {
+            background: #111111;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto;
+            display: block;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 14px;
+            letter-spacing: 0.06em;
+        }
+
+        nav a:hover {
+            color: #c89a2b;
+        }
+
+        .hero {
+            background: radial-gradient(circle at top left, #c89a2b 0, #111111 45%, #000000 100%);
+            color: white;
+            padding: 60px 20px 50px;
+            border-bottom: 3px solid #c89a2b;
+        }
+
+        .hero-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .hero h1 {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 15px;
+            margin-bottom: 18px;
+        }
+
+        .hero-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 18px;
+        }
+
+        .badge {
+            background: rgba(0,0,0,0.4);
+            border: 1px solid rgba(248,250,252,0.3);
+            border-radius: 999px;
+            padding: 4px 10px;
+            font-size: 12px;
+        }
+
+        .btn-primary, .btn-secondary {
+            display: inline-block;
+            padding: 10px 18px;
+            border-radius: 999px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+            border: 1px solid transparent;
+            cursor: pointer;
+            transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.15s ease;
+        }
+
+        .btn-primary {
+            background: #c89a2b;
+            color: #111111;
+            margin-right: 10px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.4);
+        }
+
+        .btn-primary:hover {
+            background: #dcb449;
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border-color: #f3f4f6;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(0,0,0,0.4);
+        }
+
+        .hero-card {
+            background: #fafafa;
+            color: #111111;
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            border-top: 3px solid #c89a2b;
+        }
+
+        .hero-card h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .hero-card p {
+            font-size: 14px;
+            margin-bottom: 6px;
+        }
+
+        .tag {
+            display: inline-block;
+            font-size: 11px;
+            background: #fff5d6;
+            color: #7a5a0a;
+            padding: 2px 8px;
+            border-radius: 999px;
+            margin-right: 4px;
+            margin-bottom: 4px;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: 30px auto 40px;
+            padding: 0 20px;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        section h2 {
+            font-size: 24px;
+            margin-bottom: 12px;
+            color: #111111;
+        }
+
+        section p.lead {
+            font-size: 14px;
+            color: #4b5563;
+            margin-bottom: 18px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 18px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+            border-top: 2px solid #e5e5e5;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .service-title {
+            font-size: 16px;
+            margin-bottom: 6px;
+            color: #111111;
+        }
+
+        .service-list {
+            font-size: 14px;
+        }
+
+        .service-list li {
+            margin-left: 18px;
+            margin-bottom: 4px;
+        }
+
+        .small-title {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 4px;
+            color: #111111;
+        }
+
+        .timeline {
+            border-left: 3px solid #e5e7eb;
+            padding-left: 15px;
+        }
+
+        .timeline-step {
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        .timeline-step::before {
+            content: "";
+            position: absolute;
+            left: -20px;
+            top: 4px;
+            width: 10px;
+            height: 10px;
+            background: #c89a2b;
+            border-radius: 50%;
+            border: 2px solid white;
+            box-shadow: 0 0 0 2px #e5e7eb;
+        }
+
+        .timeline-step h3 {
+            font-size: 15px;
+            margin-bottom: 3px;
+        }
+
+        .timeline-step p {
+            font-size: 13px;
+            color: #4b5563;
+        }
+
+        .pill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 6px;
+        }
+
+        .pill-list span {
+            font-size: 12px;
+            border-radius: 999px;
+            padding: 4px 10px;
+            background: #fff5d6;
+            color: #7a5a0a;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+            gap: 18px;
+        }
+
+        .contact-form label {
+            display: block;
+            font-size: 13px;
+            margin-bottom: 4px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border-radius: 6px;
+            border: 1px solid #d1d5db;
+            font-size: 13px;
+        }
+
+        .contact-form button {
+            padding: 9px 16px;
+            border-radius: 999px;
+            border: none;
+            background: #c89a2b;
+            color: #111111;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+        }
+
+        .contact-form button:hover {
+            background: #dcb449;
+        }
+
+        .contact-details p {
+            font-size: 14px;
+            margin-bottom: 6px;
+        }
+
+        .contact-details strong {
+            display: inline-block;
+            width: 85px;
+        }
+
+        iframe {
+            width: 100%;
+            border: 0;
+            border-radius: 10px;
+            min-height: 200px;
+        }
+
+        footer {
+            background: #000000;
+            color: #d1d5db;
+            text-align: center;
+            padding: 12px;
+            font-size: 12px;
+            border-top: 2px solid #c89a2b;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .hero-inner {
+                grid-template-columns: 1fr;
+            }
+            .grid-3, .grid-2, .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .nav-container {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+            nav {
+                margin-top: 4px;
+            }
+            nav a {
+                margin-left: 0;
+                margin-right: 12px;
+            }
+        }
+/* HEADER PREMIUM (logo + meniu + buton CONTACT) */
+header{
+  background:#000;
+  position:sticky;
+  top:0;
+  z-index:10;
+  border-bottom:2px solid #c89a2b;
+}
+.nav-container{
+  max-width:1100px;
+  margin:0 auto;
+  padding:10px 20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+  position:relative;
+}
+.brand img{
+  height:54px;
+  width:auto;
+  display:block;
+}
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:18px;
+}
+.nav-links a{
+  color:#fff;
+  text-decoration:none;
+  font-size:13px;
+  letter-spacing:.08em;
+  padding:10px 6px;
+  border-radius:999px;
+}
+.nav-links a:hover{ color:#c89a2b; }
+.nav-links a.cta{
+  background:#c89a2b;
+  color:#111;
+  padding:10px 14px;
+  font-weight:700;
+  box-shadow:0 3px 10px rgba(0,0,0,.35);
+}
+.nav-links a.cta:hover{ background:#dcb449; color:#111; }
+.menu-btn{
+  display:none;
+  background:transparent;
+  border:1px solid rgba(255,255,255,.25);
+  color:#fff;
+  border-radius:10px;
+  padding:8px 10px;
+  font-size:18px;
+  cursor:pointer;
+}
+
+/* MOBILE */
+@media (max-width: 820px){
+  .menu-btn{ display:block; }
+
+  .nav-links{
+    display:none;
+    position:absolute;
+    right:20px;
+    top:72px;
+    background:#000;
+    border:1px solid rgba(255,255,255,.18);
+    border-radius:14px;
+    padding:10px;
+    flex-direction:column;
+    align-items:stretch;
+    width:min(320px, calc(100vw - 40px));
+    box-shadow:0 18px 40px rgba(0,0,0,.55);
+  }
+
+  .nav-links.show{ display:flex; }
+
+  .nav-links a{
+    padding:12px 12px;
+    text-align:left;
+  }
+
+  .nav-links a.cta{
+    text-align:center;
+  }
+}
+
+/* Portofoliu: dacă ai poze în grid 2 coloane, pe mobil le face 1 coloană */
+@media (max-width: 768px) {
+  #portofoliu div[style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+</style>
+</head>
+<body id="top">
+<header>
+  <div class="nav-container">
+    <a class="brand" href="#top" aria-label="New Tehnic Dent">
+      <img src="logo_ntd.png" alt="New Tehnic Dent Logo" onerror="this.onerror=function(){this.onerror=null; this.src='images/logo_ntd.png';}; this.src='images/logo_ntd.png';">
+    </a>
+
+    <button class="menu-btn" id="menuBtn" aria-label="Deschide meniul" aria-expanded="false">
+      ☰
+    </button>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#despre">DESPRE</a>
+      <a href="#servicii">SERVICII</a>
+      <a href="#flux">FLUX</a>
+      <a href="#portofoliu">PORTOFOLIU</a>
+      <a class="cta" href="#contact">CONTACT</a>
+    </nav>
+  </div>
+</header>
+
+
+<section class="hero">
+    <div class="hero-inner">
+        <div>
+            <h1>Laborator de tehnică dentară New Tehnic Dent</h1>
+            <p>
+                Din 2007, New Tehnic Dent realizează lucrări protetice fixe și mobile, metalo-ceramice,
+                zirconiu și proteze acrilice, cu atenție la detaliu și colaborare strânsă cu medicii stomatologi.
+            </p>
+            <div class="hero-badges">
+                <span class="badge">Metalo-ceramică</span>
+                <span class="badge">Zirconiu &amp; ceramică integrală</span>
+                <span class="badge">Proteze totale și parțiale</span>
+                <span class="badge">Reparații și rebazări</span>
+            </div>
+            <a href="#contact" class="btn-primary">Solicită o colaborare</a>
+            <a href="#servicii" class="btn-secondary">Vezi serviciile</a>
+        </div>
+
+        <div class="hero-card">
+            <h2>Informații laborator</h2>
+            <p><strong>Nume laborator:</strong> New Tehnic Dent – Tehnică Dentară</p>
+            <p><strong>Adresă:</strong> Com. Valea Lupului, Str. Nufărului Nr. 6, Jud. Iași</p>
+            <p><strong>Telefon:</strong> 0742 830 155 / 0728 595 521</p>
+            <p><strong>Email:</strong> <a href="mailto:newtehnicdent@gmail.com">newtehnicdent@gmail.com</a></p>
+            <p style="margin-top:8px;">
+                <span class="tag">Experiență din 2007</span>
+                <span class="tag">Colaborare cu medici stomatologi</span>
+                <span class="tag">Lucrări protetice personalizate</span>
+            </p>
+        </div>
+    </div>
+</section>
+
+<main>
+    <!-- DESPRE -->
+    <section id="despre">
+        <h2>Despre laborator</h2>
+        <p class="lead">
+            New Tehnic Dent este un laborator de tehnică dentară cu experiență în domeniu încă din anul 2007,
+            specializat în realizarea lucrărilor protetice fixe și mobile, adaptate cu precizie fiecărui caz clinic.
+            Ne concentrăm pe calitate, detaliu și colaborare eficientă cu medicii stomatologi.
+        </p>
+
+        <div class="card">
+            <p>
+                Scopul nostru este să furnizăm lucrări estetice, funcționale și durabile, construite pe baza unei
+                comunicări permanente cu medicii colaboratori. Respectăm protocoalele de lucru și termenele stabilite,
+                pentru ca fiecare restaurare să se integreze armonios și predictibil în tratamentul pacientului.
+            </p>
+            <br>
+
+            <div class="grid-3">
+                <div>
+                    <div class="small-title">Experiență din 2007</div>
+                    <p>Cu peste 17 ani de activitate, laboratorul oferă lucrări realizate cu atenție și profesionalism,
+                    pe baza unei experiențe acumulate în timp.</p>
+                </div>
+
+                <div>
+                    <div class="small-title">Tehnologie modernă</div>
+                    <p>Utilizăm materiale și tehnologii actuale, inclusiv zirconiu, ceramică presată și proceduri CAD/CAM,
+                    pentru rezultate precise și estetice.</p>
+                </div>
+
+                <div>
+                    <div class="small-title">Calitate și precizie</div>
+                    <p>Fiecare lucrare este verificată atent din punct de vedere funcțional și estetic, pentru a asigura
+                    o adaptare optimă și un rezultat stabil în timp.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICII -->
+    <section id="servicii">
+        <h2>Servicii oferite</h2>
+        <p class="lead">
+            Laboratorul New Tehnic Dent realizează o gamă completă de lucrări protetice, folosind tehnologii moderne și materiale certificate. 
+            Ne adaptăm fiecărui caz clinic și lucrăm în strânsă colaborare cu medicii stomatologi pentru rezultate precise și estetice.
+        </p>
+
+        <div class="grid-3">
+            <div class="card">
+                <div class="service-title">Lucrări fixe</div>
+                <ul class="service-list">
+                    <li>Coroane metalo-ceramice</li>
+                    <li>Coroane integral ceramice (zirconiu, E.max)</li>
+                    <li>Punți dentare</li>
+                    <li>Fațete ceramice</li>
+                    <li>Inlay / Onlay ceramic</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="service-title">Lucrări pe implanturi</div>
+                <ul class="service-list">
+                    <li>Coroane cimentate sau înșurubate pe implant</li>
+                    <li>Supraprotezări pe bară sau capse</li>
+                    <li>Structuri și armături zirconiu CAD/CAM</li>
+                    <li>Planificare digitală (după caz)</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="service-title">Lucrări mobile</div>
+                <ul class="service-list">
+                    <li>Proteze totale acrilice</li>
+                    <li>Proteze parțiale acrilice</li>
+                    <li>Proteze scheletate</li>
+                    <li>Reparații proteze</li>
+                    <li>Rebazări</li>
+                </ul>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="card">
+            <div class="small-title">Tehnologii și materiale utilizate</div>
+            <div class="pill-list">
+                <span>Zirconiu</span>
+                <span>E.max</span>
+                <span>Metal nobil / nenobil</span>
+                <span>Ceramică presată</span>
+                <span>Rășini acrilice</span>
+                <span>CAD/CAM</span>
+                <span>Print 3D modele</span>
+                <span>Compozit laborator</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- FLUX -->
+    <section id="flux">
+        <h2>Flux de lucru pentru medici colaboratori</h2>
+        <p class="lead">
+            Pentru o colaborare eficientă și rezultate predictibile, laboratorul New Tehnic Dent urmează un flux de lucru bine stabilit, 
+            de la preluarea cazului până la predarea restaurării finale.
+        </p>
+
+        <div class="grid-2">
+            <div class="card timeline">
+                <div class="timeline-step">
+                    <h3>1. Preluarea cazului</h3>
+                    <p>
+                        Primim amprentele (clasice sau digitale) împreună cu indicațiile medicului și analiza inițială a cazului. 
+                        Confirmăm tipul de lucrare, materialele și particularitățile clinice înainte de începerea execuției.
+                    </p>
+                </div>
+
+                <div class="timeline-step">
+                    <h3>2. Planificarea lucrării</h3>
+                    <p>
+                        Stabilim detaliile tehnice: materialele recomandate (zirconiu, E.max, metal-ceramică), nuanța dorită, 
+                        etapele necesare și termenul final de predare. Comunicarea este constantă pentru a evita ajustările ulterioare.
+                    </p>
+                </div>
+
+                <div class="timeline-step">
+                    <h3>3. Execuție etapizată</h3>
+                    <p>
+                        În funcție de tipul restaurării, parcurgem etapele standardizate: modelare, schelet (metal, zirconiu sau CAD/CAM), 
+                        aplicare ceramică/compozit, verificări estetice și funcționale, finisare, glazurare și lustruire. 
+                        Contactăm medicul dacă apar detalii ce necesită clarificări.
+                    </p>
+                </div>
+
+                <div class="timeline-step">
+                    <h3>4. Finalizare și livrare</h3>
+                    <p>
+                        Lucrarea este verificată pe model din punct de vedere al adaptării și esteticii, apoi livrată 
+                        împreună cu recomandări de cimentare și informații despre materialele utilizate.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="small-title">Termene orientative de execuție</div>
+                <ul class="service-list">
+                    <li><strong>Coroană metalo-ceramică:</strong> 5–7 zile lucrătoare</li>
+                    <li><strong>Coroană zirconiu / ceramică integrală:</strong> 7–10 zile</li>
+                    <li><strong>Fațete ceramice:</strong> 7–10 zile</li>
+                    <li><strong>Proteze totale / parțiale:</strong> 7–10 zile</li>
+                    <li><strong>Proteze scheletate:</strong> 10–14 zile</li>
+                    <li><strong>Reparații / rebazări:</strong> 24–48 ore</li>
+                </ul>
+                <p style="font-size: 12px; color:#6b7280; margin-top:8px;">
+                    *Termenele pot varia în funcție de complexitatea cazurilor și volumul de lucrări în execuție.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTOFOLIU -->
+   <section id="portofoliu">
+  <h2>Portofoliu lucrări</h2>
+
+  <div style="background:#fff; padding:20px; border-radius:12px;">
+    <h3>Caz: restaurare metalo-ceramică – înainte / după</h3>
+
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:20px; margin-top:15px;">
+
+      <div>
+        <p><strong>Înainte</strong></p>
+       <img src="INAINTE.png" alt="Înainte" style="width:100%; max-width:900px;">
+
+      </div>
+
+      <div>
+        <p><strong>După</strong></p>
+       <img src="DUPA.png" alt="După" style="width:100%; border-radius:10px;">
+      </div>
+
+    </div>
+
+    <p style="margin-top:15px;">
+      Restaurare metalo-ceramică completă realizată pentru refacerea funcției și esteticii.
+    </p>
+
+    <p style="font-size:12px; color:#555; margin-top:8px;">
+      *Imagini cu scop demonstrativ. Identitatea pacientului este protejată.
+    </p>
+  </div>
+</section>
+
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <h2>Contact și colaborări</h2>
+        <p class="lead">
+            Pentru colaborări cu medici stomatologi, programarea cazurilor sau întrebări legate de materiale și termene,
+            ne poți contacta folosind formularul de mai jos sau datele de contact.
+        </p>
+
+        <div class="contact-grid">
+            <div class="card">
+                <form class="contact-form" onsubmit="event.preventDefault(); alert('Formularul este demonstrativ. Pentru trimiterea reală a mesajului este necesară configurarea unui sistem de trimitere email (ex: PHP, serviciu extern etc.).');">
+                    <label for="nume">Nume medic / cabinet</label>
+                    <input type="text" id="nume" placeholder="Nume și prenume / Nume cabinet">
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="adresa@exemplu.com">
+
+                    <label for="telefon">Telefon</label>
+                    <input type="tel" id="telefon" placeholder="07xx xxx xxx">
+
+                    <label for="mesaj">Mesaj</label>
+                    <textarea id="mesaj" rows="4" placeholder="Scrie detalii despre colaborare sau tipul de lucrări dorit..."></textarea>
+
+                    <button type="submit">Trimite mesaj</button>
+                </form>
+            </div>
+
+            <div class="card contact-details">
+                <p><strong>Adresă:</strong> Com. Valea Lupului, Str. Nufărului Nr. 6, Jud. Iași</p>
+                <p><strong>Telefon:</strong> 0742 830 155 / 0728 595 521</p>
+                <p><strong>Email:</strong> <a href="mailto:newtehnicdent@gmail.com">newtehnicdent@gmail.com</a></p>
+                <p><strong>Program:</strong> Luni–Vineri 09:00–18:00</p>
+                <br>
+                <p class="small-title">Localizare</p>
+                <iframe
+  src="https://www.google.com/maps?q=Comuna+Valea+Lupului+Strada+Nufărului+6+Iași+707410&output=embed"
+  width="100%"
+  height="250"
+  style="border:0; border-radius:10px;"
+  allowfullscreen=""
+  loading="lazy"
+  referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    &copy; <span id="year"></span> Laborator Tehnică Dentară New Tehnic Dent. Toate drepturile rezervate.
+</footer>
+
+<script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+<script>
+  // Meniu mobil
+  const btn = document.getElementById('menuBtn');
+  const links = document.getElementById('navLinks');
+
+  if (btn && links) {
+    btn.addEventListener('click', () => {
+      const isOpen = links.classList.toggle('show');
+      btn.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    // Închide meniul după click pe un link (mobil)
+    links.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        links.classList.remove('show');
+        btn.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+</script>
+
+
+</body>
+</html>
